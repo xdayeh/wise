@@ -65,6 +65,7 @@
                         <strong><?php echo Application::$app->user->getDisplayName(); ?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="/dash">Dashboard</a></li>
                         <li><a class="dropdown-item" href="/profile">Profile</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/logout">Sign out</a></li>

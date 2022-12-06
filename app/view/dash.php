@@ -1,5 +1,5 @@
 <?php use Wise\Core\Application; ?>
-<h1><?php echo Application::$app->language->dictionary['Lang_Dash']; ?></h1>
+<h2><?php echo Application::$app->language->dictionary['Lang_Dash']; ?></h2>
 
 <div class="col-lg-3 col-md-6 col-12">
     <div class="card text-white bg-warning mb-4 shadow">
@@ -12,7 +12,7 @@
             </h3>
             <p class="card-text fw-bold position-absolute">Majors</p>
         </div>
-        <a href="#" class="text-decoration-none card-footer text-center text-white stretched-link">More details</i></a>
+        <a href="/majors" class="text-decoration-none card-footer text-center text-white stretched-link">More details</i></a>
     </div>
 </div>
 
@@ -29,7 +29,7 @@
             </h3>
             <p class="card-text fw-bold position-absolute">Doctors</p>
         </div>
-        <a href="#" class="text-decoration-none card-footer text-center text-white">More details</a>
+        <a href="/doctors" class="text-decoration-none card-footer text-center text-white">More details</a>
     </div>
 </div>
 <div class="col-lg-3 col-md-6 col-12">
@@ -43,7 +43,7 @@
             </h3>
             <p class="card-text fw-bold position-absolute">Students</p>
         </div>
-        <a href="#" class="text-decoration-none card-footer text-center text-white">More details</a>
+        <a href="/students" class="text-decoration-none card-footer text-center text-white">More details</a>
     </div>
 </div>
 <div class="col-lg-3 col-md-6 col-12">
@@ -57,7 +57,7 @@
             </h3>
             <p class="card-text fw-bold position-absolute">Block</p>
         </div>
-        <a href="#" class="text-decoration-none card-footer text-center text-white">More details</a>
+        <a href="/block" class="text-decoration-none card-footer text-center text-white">More details</a>
     </div>
 </div>
 
