@@ -1,0 +1,25 @@
+# PHP MVC Framework for University Projects
+
+A lightweight PHP MVC framework tailored for university students to create graduation projects with ease and efficiency.
+
+## Features
+- **AutoLoader**: Simplifies class management by automatically loading required files.
+- **Log Class**: Tracks programming errors and debugging information.
+- **Request Class**: Processes HTTP requests and retrieves parameters.
+- **Response Class**: Handles HTTP responses and headers.
+- **Router Class**: Maps URLs to controllers and actions.
+- **View Class**: Renders dynamic views with templating support.
+
+## Getting Started
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/xdayeh/wise.git
+   ```
+2. Navigate to the project directory and set up your server environment.
+3. Start building your application using the provided structure.
+
+## Contributions
+Contributions are welcome! Feel free to fork this repository and submit pull requests.
+
+## License
+Free to use without restrictions.
