@@ -2,10 +2,12 @@
 
 namespace MVC\core;
 
+use MVC\core\session\Session;
+
 class Request
 {
     public static array $globalWeb = [
-        //Session::class,
+        Session::class,
         //CSRFToken::class
     ];
     public static array $globalApi = [];
