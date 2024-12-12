@@ -9,14 +9,19 @@ A lightweight PHP MVC framework tailored for university students to create gradu
 - **Response Class**: Handles HTTP responses and headers.
 - **Router Class**: Maps URLs to controllers and actions.
 - **View Class**: Renders dynamic views with templating support.
+- **Session Class**: Manages user sessions securely and efficiently.
+- **Hash Class**: Provides utilities for creating and verifying hashes for security purposes.
 
 ## Getting Started
-1. Clone this repository:  
+1. Clone this repository:
    ```bash
-   git clone https://github.com/xdayeh/wise.git
+   git clone https://github.com/yourusername/your-repo-name.git
    ```
 2. Navigate to the project directory and set up your server environment.
-3. Start building your application using the provided structure.
+3. Ensure that the following files have write permissions:
+   - `storage/log/error.log`
+   - `storage/session`
+4. Start building your application using the provided structure.
 
 ## Contributions
 Contributions are welcome! Feel free to fork this repository and submit pull requests.
