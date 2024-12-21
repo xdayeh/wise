@@ -15,7 +15,7 @@ A lightweight PHP MVC framework tailored for university students to create gradu
 ## Getting Started
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/xdayeh/wise.git
    ```
 2. Navigate to the project directory and set up your server environment.
 3. Ensure that the following files have write permissions:
