@@ -2,6 +2,8 @@
 
 namespace MVC\core;
 
+use MVC\core\validations\Validation;
+
 abstract class BaseController
 {
     protected array $layoutParams = [];
@@ -18,5 +20,9 @@ abstract class BaseController
                 'exception' => $e
             ]);
         }
+    }
+    public function validate(array|object $requests, array $rules, array|null $attributes = []): Validation
+    {
+        return Validation::make($requests, $rules, $attributes);
     }
 }

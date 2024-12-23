@@ -11,6 +11,7 @@ A lightweight PHP MVC framework tailored for university students to create gradu
 - **View Class**: Renders dynamic views with templating support.
 - **Session Class**: Manages user sessions securely and efficiently.
 - **Hash Class**: Provides utilities for creating and verifying hashes for security purposes.
+- **Validation Class**: Facilitates data validation with customizable rules to ensure data integrity.
 
 ## Getting Started
 1. Clone this repository:
