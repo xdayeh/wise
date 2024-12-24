@@ -31,7 +31,6 @@ A lightweight PHP MVC framework tailored for university students to create gradu
    - Download PHP version 8.3 VS16 X64 Thread Safe via the following link:  
      [https://windows.php.net/download#php-8.3](https://windows.php.net/download#php-8.3)
    - After downloading PHP, move it to the correct path, preferably `C:/php`.
-   - Run it, then go to **Properties** > **This PC** > **Advanced system settings** > **Environment Variables**. Edit and add a new path: `C:\php`.
 
 2. **Download Apache**:
    - Download Apache 2.4.6 Win64 via the link:  
