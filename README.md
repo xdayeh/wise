@@ -16,7 +16,7 @@ A lightweight PHP MVC framework tailored for university students to create gradu
 ## Getting Started
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/xDayeh/wise.git
    ```
 2. Navigate to the project directory and set up your server environment.
 3. Ensure that the following files have write permissions:
@@ -50,6 +50,15 @@ A lightweight PHP MVC framework tailored for university students to create gradu
      </Directory>
      ```
    - Change `AllowOverride None` to `AllowOverride All` in the `<Directory>` section.
+   - Change `DirectoryIndex index.html` to `DirectoryIndex index.php`.
+   - Update the `ServerName` directive:
+     ```
+     # Change from:
+     # ServerName www.example.com:80
+     # To:
+     ServerName localhost:80
+     ```
+     Ensure you remove the `#` from the `ServerName` line.
 
 4. **Link PHP with Apache**:
    - Ensure Apache is not running and open its configuration file: `C:/Apache24/conf/httpd.conf`.
@@ -70,8 +79,8 @@ A lightweight PHP MVC framework tailored for university students to create gradu
    - Open CMD and navigate to the Apache folder.
    - Run the following commands:
      ```
-     httpd.exe -k install
-     httpd.exe -k start
+     C:/Apache24/bin/httpd.exe -k install
+     C:/Apache24/bin/httpd.exe -k start
      ```
 
 ### Linux (Ubuntu)
