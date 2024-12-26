@@ -50,11 +50,8 @@ A lightweight PHP MVC framework tailored for university students to create gradu
      ```
    - Change `AllowOverride None` to `AllowOverride All` in the `<Directory>` section.
    - Change `DirectoryIndex index.html` to `DirectoryIndex index.php`.
-   - Update the `ServerName` directive:
+   - Update the `ServerName` directive Change from: ``#ServerName www.example.com:80`` To:
      ```
-     # Change from:
-     # ServerName www.example.com:80
-     # To:
      ServerName localhost:80
      ```
      Ensure you remove the `#` from the `ServerName` line.
@@ -81,6 +78,25 @@ A lightweight PHP MVC framework tailored for university students to create gradu
      C:/Apache24/bin/httpd.exe -k install
      C:/Apache24/bin/httpd.exe -k start
      ```
+6. **Enable the PDO MySQL & MySQLi Extension**:
+    - Open your php.ini file. This file is usually located in the PHP installation directory, for example:
+      ```C:\php\php.ini```
+        - Search for the following line:
+           ```
+          ;extension=pdo_mysql
+          ;extension=mysqli
+            ```
+            - Remove the semicolon (;) at the beginning of the line to uncomment it:
+          ```
+          extension=pdo_mysql
+          extension=mysqli
+          ```
+            - Restart Apache
+              ```C:/Apache24/bin/httpd.exe -k restart```
+7. **Download MySQL**
+    - Download MySQL Installer 8.0 via the link:  
+      [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
+    - After downloading MySQL, Install **MySQL Server** & **MySQL Workbench**
 
 ### Linux (Ubuntu)
 - Explanation will be added soon.
