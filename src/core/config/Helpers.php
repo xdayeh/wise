@@ -57,3 +57,11 @@ if (!function_exists('svg')) {
         ';
     }
 }
+// Define the request function
+if (!function_exists('request')) {
+    function request(?string $name = null, mixed $default = null, bool $sanitize = true): mixed
+    {
+        $filter = $sanitize ? FILTER_SANITIZE_FULL_SPECIAL_CHARS : null;
+        return \MVC\core\Request::getBody($name, $default, $filter);
+    }
+}

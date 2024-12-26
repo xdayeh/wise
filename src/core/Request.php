@@ -23,7 +23,7 @@ class Request
         $path = $position !== false ? substr($path, 0, $position) : $path;
         return $path === '/' ? '/' : ltrim($path, '/');
     }
-    public function method(): string
+    public static function method(): string
     {
         return strtoupper($_SERVER['REQUEST_METHOD']);
     }
@@ -57,4 +57,38 @@ class Request
         return $segments[$offset] ?? '';
     }
      * */
+    public static function getBody(?string $name = null, mixed $default = null, int|array $filter = FILTER_SANITIZE_FULL_SPECIAL_CHARS): mixed
+    {
+        $method = self::method();
+        $data = [];
+
+        if ($method === 'GET') {
+            $data = $_GET;
+        } elseif ($method === 'POST') {
+            $data = $_POST;
+        } elseif (in_array($method, ['PUT', 'DELETE', 'PATCH'])) {
+            $input = file_get_contents('php://input');
+            $jsonData = json_decode($input, true);
+            if (json_last_error() === JSON_ERROR_NONE) {
+                $data = $jsonData;
+            } else {
+                parse_str($input, $data);
+            }
+        }
+
+        // Sanitize the data
+        $data = filter_var_array($data, $filter) ?? [];
+
+        // Merge file uploads for POST requests
+        if ($method === 'POST' && !empty($_FILES)) {
+            $data = array_merge($data, $_FILES);
+        }
+
+        // Return specific parameter or all data
+        if ($name !== null) {
+            return $data[$name] ?? $default;
+        }
+        return $data;
+    }
+
 }
